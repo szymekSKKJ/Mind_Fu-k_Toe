@@ -1,0 +1,17 @@
+.default-button {
+  width: auto;
+  height: auto;
+  padding: 8px 16px 8px 16px;
+  background-color: #e7b038;
+  border: unset;
+  color: white;
+  font-size: 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 200ms;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #ebbf60;
+  }
+}

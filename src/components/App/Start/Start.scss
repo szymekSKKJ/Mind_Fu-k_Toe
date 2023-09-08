@@ -1,0 +1,145 @@
+.start {
+  width: auto;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 25px 0px 25px;
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 0px 0px 0px;
+    align-items: flex-start;
+  }
+
+  .start-wrapper {
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
+    gap: 100px;
+
+    @media screen and (max-width: 1200px) {
+      gap: 40px;
+    }
+
+    @media screen and (max-width: 1024px) {
+      gap: 0px;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: unset;
+      gap: 50px;
+    }
+
+    .buttons-and-title-wrapper {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-top: 50px;
+      overflow: hidden;
+
+      @media screen and (max-width: 1024px) {
+        margin-right: -75px;
+      }
+
+      @media screen and (max-width: 768px) {
+        margin-right: 0px;
+        margin-top: 0px;
+      }
+
+      h1 {
+        font-size: 80px;
+        text-align: center;
+        color: white;
+        white-space: nowrap;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 60px;
+        }
+
+        @media screen and (max-width: 1024px) {
+          font-size: 50px;
+        }
+
+        @media screen and (max-width: 425px) {
+          font-size: 40px;
+        }
+      }
+
+      > .buttons {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-right: 0px;
+
+        button {
+          font-size: 24px;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 20px;
+          }
+
+          @media screen and (max-width: 425px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      > .buttons.animating {
+        animation: animateButtons 750ms forwards;
+
+        @keyframes animateButtons {
+          0% {
+            transform: translateX(0%);
+          }
+          50% {
+            transform: translateX(-100%);
+          }
+          51% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(0%);
+          }
+        }
+      }
+    }
+
+    .main-board-wrapper {
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 25px;
+      scale: 0.9;
+      transform-origin: center center;
+      margin-left: -50px;
+
+      @media screen and (max-width: 1024px) {
+        scale: 0.75;
+        transform-origin: right center;
+        margin-left: 0px;
+      }
+
+      @media screen and (max-width: 768px) {
+        scale: 1;
+        transform-origin: center center;
+      }
+
+      @media screen and (max-width: 425px) {
+        scale: 1;
+        transform-origin: center center;
+      }
+    }
+  }
+}
